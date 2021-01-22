@@ -1,5 +1,10 @@
 const Todo = props => {
-    return <h1>{props.todo}</h1>
+    const { item } = props
+    return (
+        <section>
+            <h3>{ item }</h3>
+        </section>
+    )
 }
 
-export default Todo
+export default Todo;

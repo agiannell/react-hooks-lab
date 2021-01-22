@@ -1,21 +1,25 @@
 import { useState } from 'react';
-import AddTodo from './Components/AddTodo'
+import Header from './Components/Header';
+import AddTodo from './Components/AddTodo';
 import List from './Components/List';
+import './reset.css';
 import './App.css';
 
 function App() {
-  const [todoArr, setTodoArr] = useState([]);
+  const [ todoArr, setTodoArr ] = useState([]);
 
-  const addTodo = todo => {
-    const newArr = [ ...todoArr, todo ]
-    setTodoArr(newArr);
+  const addItem = item => {
+    setTodoArr([ ...todoArr, item ])
   }
 
   return (
-    <div className="App App-header">
-      <AddTodo addTodo={addTodo} />
-      <List todoArr={todoArr} />
-    </div>
+    <main className='main'>
+      <Header />
+      <section className='content'>
+        <AddTodo addFn={addItem} />
+        <List todoArr={todoArr} />
+      </section>
+    </main>
   );
 }
 

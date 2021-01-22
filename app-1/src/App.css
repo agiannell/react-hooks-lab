@@ -1,38 +1,117 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  /* font-family: 'Hachi Maru Pop', cursive; */
+  /* font-family: 'Permanent Marker', cursive; */
+  /* font-family: 'Roboto', sans-serif; */
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: aquamarine;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Permanent Marker', cursive;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  /* border: 2px dotted red; */
+  background-color: #fff;
+  color: rgb(107, 107, 107);
+  height: 60px;
+  width: 100vw;
+  padding-left: 20px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2em;
+  letter-spacing: .1em;
+  box-shadow: 0 0 15px 3px rgba(0,0,0,0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  background-color: #fff;
+  height: 70vh;
+  width: 70vw;
+  min-width: 500px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+form {
+  /* border: 2px dotted red; */
+  width: 70%;
+  margin: 20px 0 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form input {
+  height: 30px;
+  width: 60%;
+  min-width: 200px;
+  padding-left: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(107, 107, 107);
+  /* box-shadow: 0 0 3px 1px rgba(0,0,0,0.2); */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: rgb(107, 107, 107);
+}
+
+form input:focus {
+  outline: none;
+}
+
+form input::placeholder {
+  color: rgb(184, 184, 184);
+}
+
+form button {
+  height: 100%;
+  width: 90px;
+  background-color: rgb(89, 194, 159);
+  border: none;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: .2s;
+}
+
+form button:hover {
+  background-color: rgb(110, 223, 185);
+}
+
+form button:active {
+  outline: none;
+  transform: scale(.9);
+}
+
+form button:focus {
+  outline: none;
+}
+
+h1 {
+  color: rgb(107, 107, 107);
+  font-size: 2em;
+}
+
+h3 {
+  color: rgb(107, 107, 107);
+  font-size: 1.2em;
+  margin: 15px 0;
 }

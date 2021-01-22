@@ -1,20 +1,24 @@
 import { useState } from 'react';
 
 const AddTodo = props => {
-    const [userInput, setUserInput] = useState('');
+    const [ userInput, setUserInput ] = useState('');
 
-    const handleSubmit = () => {
-        props.addTodo(userInput);
+    const addTodo = e => {
+        e.preventDefault();
+        props.addFn(userInput);
         setUserInput('');
     }
-
-    // console.log(userInput);
+    // console.log(props)
+    // console.log(userInput)
     return (
-        <section>
-            <input value={userInput} onChange={e => setUserInput(e.target.value)} />
-            <button onClick={handleSubmit}>Submit</button>
-        </section>
+        <form onClick={e => addTodo(e)}>
+            <input 
+                value={userInput} 
+                placeholder='Enter To-Do'
+                onChange={e => setUserInput(e.target.value)} />
+            <button>Add Item</button>
+        </form>
     )
 }
 
-export default AddTodo
+export default AddTodo;
