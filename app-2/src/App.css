@@ -1,38 +1,73 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+  /* font-family: 'Metal Mania', cursive; */
+
+body {
+  background-color: rgb(18, 59, 15);
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #f3ede1;
+}
+
+header {
+  /* border: 2px dotted red; */
+  height: 60px;
+  width: 100vw;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  height: 45px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
   text-align: center;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list {
+  /* border: 2px dotted yellow; */
+  padding-top: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-family: 'Metal Mania', cursive;
+  font-size: 1.5em;
+  /* margin-bottom: 15px; */
+  letter-spacing: .1em;
+  width: 100px;
+  word-wrap: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.character {
+  /* border: 2px dotted pink; */
+  margin: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.character img {
+  height: 150px;
+  margin-bottom: 10px;
+  transition: .2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.character img:hover {
+  transform: scale(1.1);
 }

@@ -1,6 +1,10 @@
 const Character = props => {
+    const { character } = props
     return (
-        <h2>{props.pokemon.name}</h2>
+        <section className='character'>
+            <img src={character.image} alt={character.name} />
+            <h1>{character.name}</h1>
+        </section>
     )
 }
 

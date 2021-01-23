@@ -1,30 +1,29 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Character from './Components/Character';
+import Header from './Components/Header';
+import AmiiboList from './Components/AmiiboList';
+import './reset.css';
 import './App.css';
 
 function App() {
-  const [characterArr, setCharacterArr] = useState([]);
-
-  const getCharacters = () => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/')
-      .then(res => {
-        setCharacterArr(res.data.results)
-      })
-      .catch(err => console.log(err));
-  }
+  const [ amiiboArr, setAmiiboArr ] = useState([]);
 
   useEffect(() => {
-    getCharacters();
-  }, []);
+    axios.get('https://www.amiiboapi.com/api/amiibo/?amiiboSeries=0x09')
+      .then(res => {
+        setAmiiboArr(res.data.amiibo);
+      })
+      .catch(err => console.log(err));
+  }, [])
 
-  // console.log(characterArr);
+  // console.log(amiiboArr);
   return (
-    <div className="App App-header">
-      {characterArr.map((e, i) => (
-        <Character key={i} pokemon={e} />
-      ))}
-    </div>
+    <main>
+      <Header />
+      <section>
+        <AmiiboList amiiboArr={amiiboArr} />
+      </section>
+    </main>
   );
 }
 
