@@ -1,10 +1,10 @@
 import { Switch, Route } from 'react-router-dom';
-import Pokemon from './Components/Pokemon';
-import PokemonList from './Components/PokemonList';
+import CharacterInfo from './Components/CharacterInfo';
+import CharacterList from './Components/CharacterList';
 
 export default (
     <Switch>
-        <Route exact path='/' component={ PokemonList } />
-        <Route path='/pokemon/:name' component={ Pokemon } />
+        <Route exact path='/' component={ CharacterList } />
+        <Route path='/character/:tail' component={ CharacterInfo } />
     </Switch>
 )
